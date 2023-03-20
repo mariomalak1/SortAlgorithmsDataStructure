@@ -1,40 +1,48 @@
-/*
- * this algorithms class that have
- * */
 
-#ifndef SORTING_ALOGORITMS_PACKAGE_ALGORITHMS_H
-#define SORTING_ALOGORITMS_PACKAGE_ALGORITHMS_H
+#include <iostream>
+using namespace std;
 
-namespace sortLib {
-
-    void InsertionSort() {
-
+namespace sortlib
+{
+    template <class T>
+    void InsertionSort(T arr[], int size)
+    {
     }
-
-    void selectionSort() {
-
+    template <class T>
+    void selectionSort(T arr[], int size)
+    {
+        int min;
+        for (int i = 0; i < size - 1; i++)
+        {
+            min = i;
+            for (int j = i + 1; j < size; j++)
+            {
+                if (arr[j] < arr[min])
+                {
+                    min = j;
+                }
+            }
+            swap(arr[min], arr[i]);
+        }
     }
-
-    void bubbleSort() {
-
+    template <class T>
+    void bubbleSort(T arr[], int size)
+    {
     }
-
-    void shellSort() {
-
+    template <class T>
+    void shellSort(T arr[], int size)
+    {
     }
-
-    void mergeSort() {
-
+    template <class T>
+    void mergeSort(T arr[], int size)
+    {
     }
-
-    void quickSort() {
-
+    template <class T>
+    void quickSort(T arr[], int size)
+    {
     }
-
-    void countSort() {
-
+    template <class T>
+    void countSort(T arr[], int size)
+    {
     }
-
 }
-
-#endif //SORTING_ALOGORITMS_PACKAGE_ALGORITHMS_H
