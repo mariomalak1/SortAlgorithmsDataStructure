@@ -6,6 +6,7 @@
 using namespace sortlib;
 using namespace std;
 
+<<<<<<< HEAD
 int arrMenu()
 {
     int choice;
@@ -222,4 +223,16 @@ start:
 int main()
 {
     displayMenu();
+=======
+int main() {
+    int arr[] = {2,5,8,7,4};
+    int n = 5;
+
+    sortLib::printArr(arr, n);
+
+    sortLib::insertionSort(arr, n);
+
+    sortLib::printArr(arr, n);
+    return 0;
+>>>>>>> 24872d0647832d042f95e500771e61209c36a020
 }
