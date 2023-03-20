@@ -49,10 +49,27 @@ namespace sortLib {
     {
     }
 
-
     template <class T>
-    void shellSort(T arr[], int size)
-    {
+    void shellSort(T arr[], int size) {
+    }
+
+    void shellSort(int arr[], int n){
+        for(int gap = n / 2; gap > 0; gap /= 2){
+            // divide data into sub arrays
+            for(int i = gap; i < n; i++) {
+                int tmp = arr[i];
+
+                int j = i;
+
+
+                // sort sub array
+                for (; j >= gap && arr[j - gap] > tmp; j -= gap) {
+                    arr[j] = arr[j - gap];
+                }
+
+                arr[j] = tmp;
+            }
+        }
     }
 
 
