@@ -3,10 +3,9 @@
 #include <conio.h>
 #include <chrono>
 #include <cstdlib>
-using namespace sortlib;
+using namespace sortLib;
 using namespace std;
 
-<<<<<<< HEAD
 int arrMenu()
 {
     int choice;
@@ -83,7 +82,7 @@ void TestingAlgo(int choice)
     case 1:
     {
         algoName = "insertion Sort";
-        InsertionSort(arr, size);
+        insertionSort(arr, size);
         break;
     }
     case 2:
@@ -112,7 +111,7 @@ void TestingAlgo(int choice)
     }
     case 6:
     {
-        algoName = "Qucik Sort";
+        algoName = "Quick Sort";
         quickSort(arr, size);
         break;
     }
@@ -223,16 +222,4 @@ start:
 int main()
 {
     displayMenu();
-=======
-int main() {
-    int arr[] = {2,5,8,7,4};
-    int n = 5;
-
-    sortLib::printArr(arr, n);
-
-    sortLib::insertionSort(arr, n);
-
-    sortLib::printArr(arr, n);
-    return 0;
->>>>>>> 24872d0647832d042f95e500771e61209c36a020
 }

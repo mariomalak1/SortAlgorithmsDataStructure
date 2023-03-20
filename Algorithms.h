@@ -1,16 +1,6 @@
-
-<<<<<<< HEAD
 #include <iostream>
 using namespace std;
 
-namespace sortlib
-{
-    template <class T>
-    void InsertionSort(T arr[], int size)
-    {
-=======
-#ifndef SORTING_ALOGORITMS_PACKAGE_ALGORITHMS_H
-#define SORTING_ALOGORITMS_PACKAGE_ALGORITHMS_H
 
 namespace sortLib {
 
@@ -33,8 +23,9 @@ namespace sortLib {
                 }
             }
         }
->>>>>>> 24872d0647832d042f95e500771e61209c36a020
     }
+
+
     template <class T>
     void selectionSort(T arr[], int size)
     {
@@ -52,22 +43,32 @@ namespace sortLib {
             swap(arr[min], arr[i]);
         }
     }
+
+
     template <class T>
     void bubbleSort(T arr[], int size)
     {
     }
+
+
     template <class T>
     void shellSort(T arr[], int size)
     {
     }
+
+
     template <class T>
     void mergeSort(T arr[], int size)
     {
     }
+
+
     template <class T>
     void quickSort(T arr[], int size)
     {
     }
+
+
     template <class T>
     void countSort(T arr[], int size)
     {
