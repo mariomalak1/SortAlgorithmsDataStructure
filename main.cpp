@@ -130,8 +130,10 @@ void TestingAlgo(int choice)
     auto end = chrono::high_resolution_clock::now();
     double runTime = double(chrono::duration_cast<chrono::milliseconds>(end - start).count());
     system("cls");
+
     cout << "#############################################" << endl;
-    cout << " # " << algoName << " RunTime:" << runTime << " milliseconds #" << endl;
+    cout << " # "
+         << "\033[31m" << algoName << " RunTime:" << runTime << " milliseconds\033[0m #" << endl;
     cout << "#############################################" << endl;
 }
 void displayMenu()
