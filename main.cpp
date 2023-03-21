@@ -11,6 +11,7 @@ int arrMenu()
     int choice;
     int size;
     system("cls");
+start:
     cout << "What is the size of the array you want to try:" << endl;
     cout << "1-200" << endl;
     cout << "2-500" << endl;
@@ -58,11 +59,12 @@ int arrMenu()
         size = 50000;
         break;
     }
-
     default:
+    {
+        system("cls");
         cout << "##       Wrong INPUT        ##" << endl;
-        size = 0;
-        break;
+        goto start;
+    }
     }
     return size;
 }
@@ -74,8 +76,9 @@ void TestingAlgo(int choice)
     int *arr = new int[size];
     for (int i = 0; i < size; i++)
     {
-        arr[i] = rand();
+        arr[i] = 1 + (rand() % 5000);
     }
+
     auto start = chrono::high_resolution_clock::now();
     switch (choice)
     {
@@ -118,6 +121,7 @@ void TestingAlgo(int choice)
     case 7:
     {
         algoName = "Count Sort";
+
         countSort(arr, size);
         break;
     }
@@ -130,11 +134,14 @@ void TestingAlgo(int choice)
     auto end = chrono::high_resolution_clock::now();
     double runTime = double(chrono::duration_cast<chrono::milliseconds>(end - start).count());
     system("cls");
-
     cout << "#############################################" << endl;
     cout << " # "
          << "\033[31m" << algoName << " RunTime:" << runTime << " milliseconds\033[0m #" << endl;
     cout << "#############################################" << endl;
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i] << endl;
+    }
 }
 void displayMenu()
 {
