@@ -49,16 +49,6 @@ namespace sortLib
         }
     }
 
-    template <class T>
-    void bubbleSort(T arr[], int size)
-    {
-    }
-
-    template <class T>
-    void shellSort(T arr[], int size)
-    {
-    }
-
     void shellSort(int arr[], int n)
     {
         for (int gap = n / 2; gap > 0; gap /= 2)
@@ -87,9 +77,37 @@ namespace sortLib
     }
 
     template <class T>
-    void quickSort(T arr[], int size)
-    {
+    void quickSort(T arr[], int left, int right) {
+        int i = left, j = right;
+        T tmp;
+        T pivot = arr[(left + right) / 2];
+
+        // Partition the array
+        while (i <= j) {
+            while (arr[i] < pivot) {
+                i++;
+            }
+            while (arr[j] > pivot) {
+                j--;
+            }
+            if (i <= j) {
+                tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
+                i++;
+                j--;
+            }
+        };
+
+        // Recursion
+        if (left < j) {
+            quickSort(arr, left, j);
+        }
+        if (i < right) {
+            quickSort(arr, i, right);
+        }
     }
+
 
     template <class T>
     void countSort(T arr[], int size)
