@@ -122,7 +122,7 @@ namespace sortLib
             }
         }
         long long int *count = new long long int[maxEl + 1];
-        // intializing count array to = 0
+        // initializing count array to = 0
         for (int i = 0; i <= maxEl; i++)
         {
             count[i] = 0;

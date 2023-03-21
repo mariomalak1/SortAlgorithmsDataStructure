@@ -97,7 +97,7 @@ void TestingAlgo(int choice)
     case 3:
     {
         algoName = "Bubble Sort";
-        bubbleSort(arr, size);
+//        bubbleSort(arr, size);
         break;
     }
     case 4:
@@ -115,7 +115,7 @@ void TestingAlgo(int choice)
     case 6:
     {
         algoName = "Quick Sort";
-        quickSort(arr, size);
+        quickSort(arr, 0, size);
         break;
     }
     case 7:
