@@ -159,7 +159,7 @@ private:
         double runTime = double(chrono::duration_cast<chrono::milliseconds>(end - start).count());
         system("cls");
         cout << "#############################################" << endl;
-        cout << " # " << algoName << " RunTime:" << runTime << " milliseconds" << endl;
+        cerr << " # " << algoName << " RunTime:" << runTime << " milliseconds" << endl;
         cout << "#############################################" << endl;
     }
 
