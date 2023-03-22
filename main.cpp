@@ -3,7 +3,6 @@
 #include <conio.h>
 #include <chrono>
 #include <cstdlib>
-using namespace sortLib;
 using namespace std;
 
 int arrMenu()
@@ -85,13 +84,13 @@ void TestingAlgo(int choice)
     case 1:
     {
         algoName = "insertion Sort";
-        insertionSort(arr, size);
+        sortLib::Algorithms::insertionSort(arr, size);
         break;
     }
     case 2:
     {
         algoName = "Selection Sort";
-        selectionSort(arr, size);
+        sortLib::Algorithms::selectionSort(arr, size);
         break;
     }
     case 3:
@@ -103,26 +102,26 @@ void TestingAlgo(int choice)
     case 4:
     {
         algoName = "Shell Sort";
-        shellSort(arr, size);
+        sortLib::Algorithms::shellSort(arr, size);
         break;
     }
     case 5:
     {
         algoName = "Merge Sort";
-        mergeSort(arr, size);
+        sortLib::Algorithms::mergeSort(arr, 0, size);
         break;
     }
     case 6:
     {
         algoName = "Quick Sort";
-        quickSort(arr, 0, size);
+        sortLib::Algorithms::quickSort(arr, 0, size);
         break;
     }
     case 7:
     {
         algoName = "Count Sort";
 
-        countSort(arr, size);
+        sortLib::Algorithms::countSort(arr, size);
         break;
     }
     default:
@@ -149,7 +148,9 @@ void displayMenu()
     int choice;
 
     cout << "Welcome To Our Sorting Algorithms Package." << endl;
-start:
+
+    start:
+
     cout << "=============================================" << endl;
     cout << "       Select One Algorithm to Try." << endl;
     cout << "=============================================" << endl;
