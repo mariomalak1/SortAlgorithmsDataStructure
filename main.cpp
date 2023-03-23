@@ -138,6 +138,8 @@ void TestingAlgo(int choice)
     cout << "#############################################" << endl;
     cout << "\033[31m" << algoName << " RunTime:" << runTime << " milliseconds\033[0m " << endl;
     cout << "#############################################" << endl;
+    // to free memory
+    delete []arr;
     // for (int i = 0; i < size; ++i)
     // {
     //     std::cout << arr[i] << ", ";
